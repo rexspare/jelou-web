@@ -1,0 +1,30 @@
+{
+  "name": "diffusion-ui-shared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/ui-shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/ui-shared/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/diffusion/ui-shared"
+      ],
+      "options": {
+        "jestConfig": "libs/diffusion/ui-shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

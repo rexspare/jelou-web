@@ -1,0 +1,30 @@
+{
+  "name": "pma-sidebar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pma/sidebar/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pma/sidebar/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/pma/sidebar"
+      ],
+      "options": {
+        "jestConfig": "libs/pma/sidebar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

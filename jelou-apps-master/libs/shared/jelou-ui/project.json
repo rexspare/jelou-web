@@ -1,0 +1,30 @@
+{
+  "name": "shared-jelou-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/jelou-ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/jelou-ui/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/shared/jelou-ui"
+      ],
+      "options": {
+        "jestConfig": "libs/shared/jelou-ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

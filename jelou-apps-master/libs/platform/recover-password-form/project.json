@@ -1,0 +1,30 @@
+{
+  "name": "platform-recover-password-form",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/platform/recover-password-form/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/platform/recover-password-form/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/platform/recover-password-form"
+      ],
+      "options": {
+        "jestConfig": "libs/platform/recover-password-form/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

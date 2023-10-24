@@ -1,0 +1,30 @@
+{
+  "name": "diffusion-campaigns",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/campaigns/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/campaigns/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/diffusion/campaigns"
+      ],
+      "options": {
+        "jestConfig": "libs/diffusion/campaigns/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

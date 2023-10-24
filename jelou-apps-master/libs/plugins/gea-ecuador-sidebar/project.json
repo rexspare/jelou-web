@@ -1,0 +1,30 @@
+{
+  "name": "plugins-gea-ecuador-sidebar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/gea-ecuador-sidebar/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/gea-ecuador-sidebar/**/*.js"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/plugins/gea-ecuador-sidebar"
+      ],
+      "options": {
+        "jestConfig": "libs/plugins/gea-ecuador-sidebar/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

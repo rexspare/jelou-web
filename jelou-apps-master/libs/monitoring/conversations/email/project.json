@@ -1,0 +1,30 @@
+{
+  "name": "monitoring-conversations-email",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/conversations/email/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/conversations/email/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/monitoring/conversations/email"
+      ],
+      "options": {
+        "jestConfig": "libs/monitoring/conversations/email/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

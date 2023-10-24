@@ -1,0 +1,30 @@
+{
+  "name": "plugins-interagua-sidebar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/interagua-sidebar/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/interagua-sidebar/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/plugins/interagua-sidebar"
+      ],
+      "options": {
+        "jestConfig": "libs/plugins/interagua-sidebar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

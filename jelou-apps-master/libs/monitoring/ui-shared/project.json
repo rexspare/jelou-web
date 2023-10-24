@@ -1,0 +1,30 @@
+{
+  "name": "monitoring-ui-shared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/ui-shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/ui-shared/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/monitoring/ui-shared"
+      ],
+      "options": {
+        "jestConfig": "libs/monitoring/ui-shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

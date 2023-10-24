@@ -1,0 +1,30 @@
+{
+  "name": "diffusion-hsm-reports",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/hsm-reports/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/hsm-reports/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/diffusion/hsm-reports"
+      ],
+      "options": {
+        "jestConfig": "libs/diffusion/hsm-reports/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

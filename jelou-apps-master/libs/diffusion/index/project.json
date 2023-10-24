@@ -1,0 +1,30 @@
+{
+  "name": "diffusion-index",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/index/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/index/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/diffusion/index"
+      ],
+      "options": {
+        "jestConfig": "libs/diffusion/index/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

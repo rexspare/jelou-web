@@ -1,0 +1,30 @@
+{
+  "name": "interceptor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/interceptor/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/interceptor/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/interceptor"
+      ],
+      "options": {
+        "jestConfig": "libs/interceptor/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

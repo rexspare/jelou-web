@@ -1,0 +1,54 @@
+{
+  "name": "plugins-utpl-sidebar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/utpl-sidebar/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/plugins/utpl-sidebar",
+        "tsConfig": "libs/plugins/utpl-sidebar/tsconfig.lib.json",
+        "project": "libs/plugins/utpl-sidebar/package.json",
+        "entryFile": "libs/plugins/utpl-sidebar/src/index.js",
+        "external": [
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/plugins/utpl-sidebar/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/utpl-sidebar/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/plugins/utpl-sidebar"
+      ],
+      "options": {
+        "jestConfig": "libs/plugins/utpl-sidebar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+[build.environment]
+  VARIABLE = "--max_old_space_size=4096"
+[[redirects]]
+  from = "/OneSignalSDKWorker.js"
+  to = "/OneSignalSDKWorker.js"
+  status = 200
+[[redirects]]
+  from = "https://pma.jelou.ai/*"
+  to = "https://apps.jelou.ai/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/js/script.js"
+  to = "https://plausible.io/js/script.tagged-events.js"
+  status = 200
+  force = true 
+[[redirects]]
+  from = "/api/event"
+  to = "https://plausible.io/api/event"
+  status = 200
+  force = true 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

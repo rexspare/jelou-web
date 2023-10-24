@@ -1,0 +1,82 @@
+{
+    "npmScope": "apps",
+    "affected": {
+        "defaultBase": "master"
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "nx-cloud",
+            "options": {
+                "cacheableOperations": [
+                    "build"
+                ],
+                "accessToken": "MmU3YmIxNmMtZTU0MS00NzgwLWE3M2YtZWEyMjY4YzA0NDQ4fHJlYWQtd3JpdGU="
+            }
+        }
+    },
+    "generators": {
+        "@nx/react": {
+            "application": {
+                "style": "scss",
+                "linter": "eslint",
+                "babel": true
+            },
+            "component": {
+                "style": "scss"
+            },
+            "library": {
+                "style": "scss",
+                "linter": "eslint"
+            }
+        }
+    },
+    "defaultProject": "apps",
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "targetDefaults": {
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "inputs": [
+                "production",
+                "^production"
+            ]
+        },
+        "e2e": {
+            "inputs": [
+                "default",
+                "^production"
+            ]
+        },
+        "lint": {
+            "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+            ]
+        },
+        "test": {
+            "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+            ]
+        }
+    },
+    "namedInputs": {
+        "default": [
+            "{projectRoot}/**/*",
+            "sharedGlobals"
+        ],
+        "sharedGlobals": [
+            "{workspaceRoot}/babel.config.json"
+        ],
+        "production": [
+            "default",
+            "!{projectRoot}/.eslintrc.json",
+            "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+            "!{projectRoot}/tsconfig.spec.json",
+            "!{projectRoot}/jest.config.[jt]s",
+            "!{projectRoot}/src/test-setup.[jt]s"
+        ]
+    }
+}

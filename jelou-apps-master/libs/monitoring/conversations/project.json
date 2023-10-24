@@ -1,0 +1,30 @@
+{
+  "name": "monitoring-conversations",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/conversations/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/conversations/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/monitoring/conversations"
+      ],
+      "options": {
+        "jestConfig": "libs/monitoring/conversations/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "monitoring-tags",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/tags/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/tags/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/monitoring/tags"
+      ],
+      "options": {
+        "jestConfig": "libs/monitoring/tags/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

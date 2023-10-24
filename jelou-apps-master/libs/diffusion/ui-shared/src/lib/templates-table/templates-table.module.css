@@ -1,0 +1,19 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+
+.tdTml > td:nth-child(4) {
+    text-transform: lowercase;
+}
+
+.tdTml > td:nth-child(4) > div {
+    display: inline-block;
+}
+
+.tdTml > td:nth-child(4) > div::first-letter {
+    text-transform: capitalize;
+}

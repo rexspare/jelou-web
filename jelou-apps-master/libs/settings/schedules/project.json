@@ -1,0 +1,30 @@
+{
+  "name": "settings-schedules",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/settings/schedules/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/settings/schedules/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/settings/schedules"
+      ],
+      "options": {
+        "jestConfig": "libs/settings/schedules/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

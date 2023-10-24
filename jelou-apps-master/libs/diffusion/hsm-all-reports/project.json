@@ -1,0 +1,20 @@
+{
+  "name": "diffusion-hsm-all-reports",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/hsm-all-reports/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/hsm-all-reports/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

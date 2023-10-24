@@ -1,0 +1,54 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+html {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-sidebar {
+    background-image: linear-gradient(0deg, #7e8ea1, #3c4655);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    line-height: 1.15;
+}

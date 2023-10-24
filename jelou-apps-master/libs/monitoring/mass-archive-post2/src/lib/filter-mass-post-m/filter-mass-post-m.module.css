@@ -1,0 +1,77 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+
+.dateDefault > div > div > div:last-child {
+    left: 70%;
+    top: -15rem;
+}
+
+.dateObl > div > div {
+    --tw-bg-opacity: 1;
+    background-color: rgba(214, 128, 111, 0.1);
+    width: 100%;
+    border-radius: 0.75rem;
+}
+
+.dateObl > div > div > div > button {
+    --tw-border-opacity: 1 !important;
+    border-color: rgb(168 57 39 / var(--tw-border-opacity)) !important;
+}
+
+.dateObl > div > div > div > button > span:nth-child(2) {
+    opacity: 0;
+}
+
+.dateObl > div > div > div > button > span {
+    background-color: transparent !important;
+}
+.dateFilter > div > div {
+    background-color: #f2f7fdbf;
+}
+.dateFilter > div > div {
+    background-color: #f2f7fdbf;
+}
+.dateFilter > div > div > div > button {
+    border: 1px solid white;
+}
+
+.dateFilter > div > div > div > button > span:nth-child(2) {
+    opacity: 0;
+}
+.dateFilter > div > div > div > button > span:nth-child(1) {
+    background-color: transparent !important;
+}
+
+.dateFilter > div > div > div > button > span:nth-child(1) > span {
+    background-color: transparent !important;
+    margin-right: 0rem !important;
+    margin-left: -0.9rem;
+}
+.bgInput > input {
+    background-color: #f2f7fdbf;
+    border: 1px solid white;
+    line-height: 1.2rem;
+    color: #00b3c7;
+    font-weight: 600;
+}
+
+.bgInput > div > div > div > div > input {
+    border: 1px solid white;
+}
+.bgInput > div > div > div > div > label {
+    background-color: transparent !important;
+}
+
+.bgInput > div > div > div > ul > li {
+    padding-left: 0.2rem;
+}
+
+.bgInput > div > div > div > div > input:focus ~ label,
+.bgInput > div > div > div > div > input:not(:placeholder-shown) ~ label {
+    display: none;
+}

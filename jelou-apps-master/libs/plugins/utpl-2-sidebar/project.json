@@ -1,0 +1,30 @@
+{
+  "name": "plugins-utpl-2-sidebar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/utpl-2-sidebar/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/utpl-2-sidebar/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/plugins/utpl-2-sidebar"
+      ],
+      "options": {
+        "jestConfig": "libs/plugins/utpl-2-sidebar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

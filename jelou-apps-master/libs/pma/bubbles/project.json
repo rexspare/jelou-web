@@ -1,0 +1,30 @@
+{
+  "name": "pma-bubbles",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pma/bubbles/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pma/bubbles/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/pma/bubbles"
+      ],
+      "options": {
+        "jestConfig": "libs/pma/bubbles/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

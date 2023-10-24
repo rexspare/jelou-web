@@ -1,0 +1,30 @@
+{
+  "name": "bots-ui-shared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/bots/ui-shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/bots/ui-shared/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/bots/ui-shared"
+      ],
+      "options": {
+        "jestConfig": "libs/bots/ui-shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

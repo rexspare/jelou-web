@@ -1,0 +1,18 @@
+.lineHorizontal {
+    display: flex;
+    color: #7e819f;
+    size: 0.875rem;
+    flex-direction: row;
+}
+
+.lineHorizontal:after,
+.lineHorizontal:before {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #c4daf2;
+    margin: auto;
+}
+
+.test {
+    border: unset;
+}

@@ -1,0 +1,177 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+.bubble {
+  padding: 0.625rem 0.813rem 0rem 0rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 0;
+}
+.bubble__text {
+  display: block;
+  padding: 0.625rem 1.25rem 0.75rem;
+  line-height: 1.5rem;
+  text-align: left;
+  background: white;
+  border-radius: 1.25rem;
+  float: left;
+  max-width: 50%;
+}
+.bubble--right {
+  justify-content: flex-end;
+}
+.bubble--bot {
+  background-color: red;
+}
+.bubble-no-padding {
+  padding-top: 0.313rem;
+}
+.bubble-left {
+  display: inline-flex;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+  background: #f2f7fd;
+  width: auto;
+  max-width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem !important;
+}
+.bubble-left-child {
+  border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+}
+.bubble-right-child {
+  border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+}
+.bubble-right {
+  display: inline-flex;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+  background: #e7f6f8;
+  width: auto;
+  max-width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem !important;
+  justify-content: flex-end !important;
+}
+.bubble-right-w-reply {
+  display: inline-flex;
+  font-size: 0.938rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+  background: #e7f6f8;
+  width: auto;
+  max-width: 100%;
+}
+.image-bubble-right {
+  display: inline-flex;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+  padding: 0rem 0rem 0rem 0rem !important;
+  background: #e7f6f8;
+  width: auto;
+  max-width: 100%;
+}
+.image-bubble-left {
+  display: inline-flex;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0.625rem 0.625rem 0.625rem 0rem;
+  background: #f2f7fd;
+  width: auto;
+  max-width: 100%;
+}
+.doc-bubble-right {
+  display: inline-flex;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0.625rem 0.625rem 0rem 0.625rem !important;
+  width: auto;
+  max-width: 100%;
+}
+.doc-bubble-left {
+  display: inline-flex;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.625rem;
+  text-align: left;
+  color: #727c94;
+  border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+  width: auto;
+  max-width: 100%;
+}
+.bubble-right div a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.bubble-right div a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0e3e44;
+}
+.bubble-left div a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.bubble-left div a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0e3e44;
+}
+.slider {
+  -webkit-appearance: none;
+  height: 0.188rem;
+  border-radius: 1rem;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: "#00c7b3";
+}
+.slider::-moz-range-thumb {
+  appearance: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #000;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/*audio**/
+.remaining {
+  left: -1.875rem;
+  bottom: 0;
+}

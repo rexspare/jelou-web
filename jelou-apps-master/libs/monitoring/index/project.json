@@ -1,0 +1,30 @@
+{
+  "name": "monitoring-index",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/index/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/index/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/monitoring/index"
+      ],
+      "options": {
+        "jestConfig": "libs/monitoring/index/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

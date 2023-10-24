@@ -1,0 +1,30 @@
+{
+  "name": "pma-timeline-chat",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pma/timeline-chat/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pma/timeline-chat/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/pma/timeline-chat"
+      ],
+      "options": {
+        "jestConfig": "libs/pma/timeline-chat/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

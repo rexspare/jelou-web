@@ -1,0 +1,20 @@
+{
+  "name": "monitoring-index-layout",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/index/layout/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/index/layout/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

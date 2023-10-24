@@ -1,0 +1,20 @@
+{
+  "name": "monitoring-mass-archive-post2",
+  "$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/monitoring/mass-archive-post2/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/mass-archive-post2/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

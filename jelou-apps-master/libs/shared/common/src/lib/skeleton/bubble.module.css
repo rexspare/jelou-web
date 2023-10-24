@@ -1,0 +1,140 @@
+.bubble {
+	 padding: 1rem 1.5rem 0rem 1rem;
+	 display: flex;
+	 justify-content: flex-start;
+	 padding-bottom: 0;
+}
+.bubble__text {
+	 display: block;
+	 padding: 0.625rem 1.25rem 0.75rem;
+	 line-height: 1.5em;
+	 text-align: left;
+	 background: white;
+	 border-radius: 1.25rem;
+	 float: left;
+	 max-width: 50%;
+}
+.bubble--right {
+	 justify-content: flex-end;
+}
+.bubble--bot {
+	 background-color: red;
+}
+
+.bubble-left {
+    font-size: 0.938rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.625rem;
+    text-align: left;
+    color: #7e819f;
+    /* // color: #7e819f; */
+    border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+    background: #f4f8ff;
+    box-shadow: 0rem 0rem 0.938rem #ffffff;
+    width: auto;
+    max-width: 100%;
+   padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.bubble-right {
+    display: inline-flex;
+    font-size: 0.938rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.625rem;
+    text-align: left;
+    color: white;
+    border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+    background: #40c6d5;
+    box-shadow: 0rem 0rem 0.938rem #ffffff;
+    width: auto;
+    max-width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.image-bubble-right {
+    display: inline-flex;
+    font-size: 0.938rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.625rem;
+    text-align: left;
+    color: white;
+    border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+    background: #40c6d5;
+    box-shadow: 0rem 0rem 0.938rem #ffffff;
+    width: auto;
+    max-width: 100%;
+}
+
+.image-bubble-left {
+    display: inline-flex;
+    font-size: 0.938rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.625rem;
+    text-align: left;
+    color: white;
+    border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+    background: #f4f8ff;
+    box-shadow: 0rem 0rem 0.938rem #ffffff;
+    width: auto;
+    max-width: 100%;
+}
+
+.doc-bubble-right {
+    display: inline-flex;
+    font-size: 0.938rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.625rem;
+    text-align: left;
+    color: #7e819f;
+    border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+    box-shadow: 0rem 0rem 0.938rem #ffffff;
+    width: auto;
+    max-width: 100%;
+}
+
+.doc-bubble-left {
+    display: inline-flex;
+    font-size: 0.938rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.625rem;
+    text-align: left;
+    color: #7e819f;
+    border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+    box-shadow: 0rem 0rem 0.938rem #ffffff;
+    width: auto;
+    max-width: 100%;
+}
+
+.bubble-right div a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.bubble-right div a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0e3e44;
+}
+
+.bubble-left div a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.bubble-left div a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0e3e44;
+}

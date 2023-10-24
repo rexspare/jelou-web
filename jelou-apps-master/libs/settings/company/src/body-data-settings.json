@@ -1,0 +1,106 @@
+{
+    "entity": {
+        "type": "BOT",
+        "id": "978a8ea5-82d5-4b07-9f3b-4c0bc2510b42"
+    },
+    "settings": [
+        {
+            "entitySettingsId": 66,
+            "module": "VIRTUAL_ASSISTANT",
+            "displayName": "",
+            "updatedAt": "2022-11-14T18:41:05.000Z",
+            "value": 86400,
+            "typeOf": "number",
+            "unity": "hours",
+            "id": 15599,
+            "createdAt": "2022-11-07T17:58:35.000Z",
+            "description": null,
+            "key": "hsmReplyTtl"
+        },
+        {
+            "entitySettingsId": 66,
+            "module": "VIRTUAL_ASSISTANT",
+            "displayName": "",
+            "updatedAt": "2022-11-11T17:36:14.000Z",
+            "value": "",
+            "typeOf": "string",
+            "unity": "",
+            "id": 13420,
+            "createdAt": "2022-10-25T14:29:49.000Z",
+            "description": null,
+            "key": "sessionLimitByMonth"
+        },
+        {
+            "entitySettingsId": 66,
+            "module": "VIRTUAL_ASSISTANT",
+            "displayName": "",
+            "updatedAt": "2022-11-15T15:35:59.000Z",
+            "value": 60,
+            "typeOf": "number",
+            "unity": "minutes",
+            "id": 13422,
+            "createdAt": "2022-10-25T14:29:49.000Z",
+            "description": null,
+            "key": "cacheLimits.option"
+        },
+        {
+            "key": "maxAttempts",
+            "typeOf": "number",
+            "value": 3,
+            "unity": null,
+            "module": "VIRTUAL_ASSISTANT"
+        },
+        {
+            "entitySettingsId": 66,
+            "module": "VIRTUAL_ASSISTANT",
+            "displayName": "",
+            "updatedAt": "2022-11-15T18:54:52.000Z",
+            "value": true,
+            "typeOf": "boolean",
+            "unity": null,
+            "id": 15610,
+            "createdAt": "2022-11-07T17:58:35.000Z",
+            "description": null,
+            "key": "audioEnabled"
+        },
+        {
+            "entitySettingsId": 66,
+            "module": null,
+            "displayName": "",
+            "updatedAt": "2022-11-14T18:41:05.000Z",
+            "value": 2592000,
+            "typeOf": "string",
+            "unity": "days",
+            "id": 15608,
+            "createdAt": "2022-11-07T17:58:35.000Z",
+            "description": null,
+            "key": "cacheRepliesTtl.quick_replies"
+        },
+        {
+            "entitySettingsId": 66,
+            "module": "VIRTUAL_ASSISTANT",
+            "displayName": "",
+            "updatedAt": "2022-11-15T15:12:03.000Z",
+            "value": true,
+            "typeOf": "boolean",
+            "unity": null,
+            "id": 13419,
+            "createdAt": "2022-10-25T14:29:49.000Z",
+            "description": null,
+            "key": "mergeBubbles"
+        },
+        {
+            "entitySettingsId": 66,
+            "module": "VIRTUAL_ASSISTANT",
+            "displayName": "",
+            "updatedAt": "2022-11-15T15:41:00.000Z",
+            "value": 300,
+            "typeOf": "number",
+            "unity": "minutes",
+            "id": 15604,
+            "createdAt": "2022-11-07T17:58:35.000Z",
+            "description": null,
+            "key": "cacheLimits.input"
+        }
+    ]
+}

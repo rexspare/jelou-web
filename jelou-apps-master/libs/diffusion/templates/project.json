@@ -1,0 +1,30 @@
+{
+  "name": "diffusion-templates",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/templates/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/templates/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/diffusion/templates"
+      ],
+      "options": {
+        "jestConfig": "libs/diffusion/templates/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

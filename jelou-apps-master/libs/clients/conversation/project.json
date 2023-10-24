@@ -1,0 +1,30 @@
+{
+  "name": "clients-conversation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/clients/conversation/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/clients/conversation/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/clients/conversation"
+      ],
+      "options": {
+        "jestConfig": "libs/clients/conversation/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

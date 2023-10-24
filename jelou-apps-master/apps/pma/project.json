@@ -1,0 +1,95 @@
+{
+  "name": "pma",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/pma/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/pma",
+        "index": "apps/pma/src/index.html",
+        "baseHref": "/",
+        "main": "apps/pma/src/main.js",
+        "polyfills": "apps/pma/src/polyfills.js",
+        "tsConfig": "apps/pma/tsconfig.app.json",
+        "assets": [
+          "apps/pma/src/favicon.ico",
+          "apps/pma/src/assets"
+        ],
+        "styles": [
+          "apps/pma/src/styles.scss"
+        ],
+        "scripts": [],
+        "webpackConfig": "@nx/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/pma/src/environments/environment.js",
+              "with": "apps/pma/src/environments/environment.prod.js"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "pma:build",
+        "hmr": false,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "pma:build:development"
+        },
+        "production": {
+          "buildTarget": "pma:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/pma/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/pma"
+      ],
+      "options": {
+        "jestConfig": "apps/pma/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

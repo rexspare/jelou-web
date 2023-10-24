@@ -1,0 +1,47 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+
+.recDot {
+    background: #eb5e50;
+    border-radius: 0.313rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: recAnimation;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes recAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+.RecTransition {
+    -webkit-transition: width 0.2s linear;
+    transition: width 0.2s linear;
+}
+
+.dilate {
+    -webkit-transition: transform 0.2s linear;
+    z-index: 120;
+    transition: transform 0.2s linear;
+}
+
+.dilate:hover {
+    transform: translate(0.325rem, -0.425rem) rotate(25deg);
+    color: "#00B3C7";
+    // transform: translate(2, 1);
+    // transform: rotate(25deg);
+}

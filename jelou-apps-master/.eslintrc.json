@@ -1,0 +1,40 @@
+{
+    "root": true,
+    // "ignorePatterns": ["**/*"],
+    "plugins": ["@nx", "react-hooks"],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "rules": {
+                "no-console": ["warn", { "allow": ["error"] }],
+                // "@nx/enforce-module-boundaries": [
+                //     "",
+                //     {
+                //         "enforceBuildableLibDependency": true,
+                //         "allow": [],
+                //         "depConstraints": [
+                //             {
+                //                 "sourceTag": "*",
+                //                 "onlyDependOnLibsWithTags": [
+                //                     "*"
+                //                 ]
+                //             }
+                //         ]
+                //     }
+                // ],
+                "react-hooks/exhaustive-deps": "off",
+                "react-hooks/rules-of-hooks": "error" // Checks rules of Hooks
+            }
+        },
+        {
+            "files": ["*.ts", "*.tsx"],
+            "extends": ["plugin:@nx/typescript"],
+            "rules": {}
+        },
+        {
+            "files": ["*.js", "*.jsx"],
+            "extends": ["plugin:@nx/javascript"],
+            "rules": {}
+        }
+    ]
+}

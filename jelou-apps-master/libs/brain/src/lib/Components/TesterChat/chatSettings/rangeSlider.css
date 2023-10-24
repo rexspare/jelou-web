@@ -1,0 +1,31 @@
+
+
+/* "absolute w-full bg-transparent appearance-none left-0 top-[-3px] z-[-1] outline-none opacity-0 */
+.slider {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  appearance: none;
+  left: 0;
+  top: -3px;
+  z-index: 9;
+  outline: none;
+  opacity: 0;
+}
+
+.slider::-ms-expand {
+  display: none;
+}
+
+.slider::-ms-clear {
+  display: none;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 35px;
+  height: 35px;
+  margin: -3px 0 0 -3px;
+  cursor: pointer;
+  appearance: none;
+}
+

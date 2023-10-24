@@ -1,0 +1,20 @@
+{
+  "name": "-pma-emails--public-email-view",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pma/emails/public-email-view/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pma/emails/public-email-view/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "plugins-oscus-sidebar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/oscus-sidebar/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/oscus-sidebar/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/plugins/oscus-sidebar"
+      ],
+      "options": {
+        "jestConfig": "libs/plugins/oscus-sidebar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

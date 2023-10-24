@@ -1,0 +1,379 @@
+@import "~react-datepicker/dist/react-datepicker.css";
+@import "~tippy.js/dist/tippy.css";
+@import "~tippy.js/animations/scale-subtle.css";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@tailwind components;
+
+@tailwind utilities;
+@tailwind base;
+
+/* purgecss start ignore */
+
+.pie-legend-square {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    display: block;
+}
+
+button:focus {
+    outline: none;
+}
+
+.react-datepicker {
+    @apply flex border-0 font-primary  text-sm font-medium text-gray-400;
+}
+
+.react-datepicker,
+.react-datepicker__month-container {
+    @apply w-full;
+}
+
+.react-datepicker__header {
+    @apply border-0 bg-transparent;
+}
+
+.react-datepicker__day-names {
+    @apply uppercase;
+}
+
+.react-datepicker__day-name {
+    @apply font-medium text-gray-400 opacity-50;
+}
+
+.react-datepicker__month {
+    @apply mt-0;
+}
+
+.react-datepicker__current-month {
+    @apply mb-1 font-semibold uppercase text-gray-400 text-opacity-60;
+}
+
+.react-datepicker__day {
+    @apply text-gray-450 rounded-full text-opacity-30;
+}
+
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range) {
+    color: #00b3c7 !important;
+    background-color: #e7f6f8 !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+    color: #00b3c7 !important;
+    background-color: #e7f6f8 !important;
+    @apply rounded-full;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    @apply relative rounded-full bg-primary-200;
+}
+
+.react-datepicker__day--range-start {
+    color: #fff !important;
+    background-color: #00b3c7 !important;
+}
+
+.react-datepicker__day--range-end {
+    color: #fff !important;
+    background-color: #00b3c7 !important;
+}
+
+.react-datepicker__day--keyboard-selected:after,
+.react-datepicker__month-text--keyboard-selected:after,
+.react-datepicker__quarter-text--keyboard-selected:after,
+.react-datepicker__year-text--keyboard-selected:after {
+    content: "";
+    display: none;
+    border-radius: 9999rem;
+    position: absolute;
+    @apply rounded-full bg-primary-200;
+}
+
+.react-datepicker__day--today {
+    color: #00b3c7 !important;
+    background-color: #e7f6f8 !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+    color: #00b3c7 !important;
+    background-color: #e7f6f8 !important;
+}
+
+.react-datepicker__day--today,
+.react-datepicker__day--range-end,
+.react-datepicker__day--in-selecting-range {
+    color: #fff !important;
+    border-radius: 9999rem !important;
+    @apply bg-primary-200;
+}
+
+.react-datepicker__day--today:after,
+.react-datepicker__day--range-end:after,
+.react-datepicker__day--in-selecting-range:after {
+    @apply hidden;
+}
+
+// .btn {
+//     @apply shadow-card rounded-full font-medium text-gray-450 flex text-sm;
+// }
+
+// .btn:hover {
+//     @apply text-purple-900;
+// }
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.2);
+}
+
+.t-body tr:last-child td {
+    border-bottom: none;
+}
+
+/**
+ * Main wrapper
+ */
+.c-select-search {
+    width: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.c-select-search *,
+.c-select-search *::after,
+.c-select-search *::before {
+    box-sizing: inherit;
+}
+
+/**
+ * Value wrapper
+ */
+.c-select-search__value {
+    position: relative;
+    z-index: 1;
+    min-width: 200px;
+    display: flex;
+    justify-items: center;
+    outline: none;
+    overflow: hidden;
+    border-radius: 999rem;
+    box-shadow: 0px 0px 20px #eaf0f7;
+    height: 100%;
+    padding-left: 1rem;
+    background-color: white;
+}
+
+.c-select-search__value::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 19px;
+    width: 11px;
+    height: 11px;
+}
+
+/**
+ * Input
+ */
+
+.c-select-search__input {
+    display: flex;
+    justify-items: center;
+    outline: none;
+    font-weight: 500;
+    color: #7e819f;
+    font-size: 0.875rem;
+}
+
+.c-select-search__input::-webkit-search-decoration,
+.c-select-search__input::-webkit-search-cancel-button,
+.c-select-search__input::-webkit-search-results-button,
+.c-select-search__input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.c-select-search__input:not([readonly]):focus {
+    cursor: initial;
+}
+
+/**
+ * Options wrapper
+ */
+.c-select-search__select {
+    background-color: white;
+    border-radius: 0.375rem;
+    z-index: 20;
+    box-shadow: 0px 0px 20px #eaf0f7;
+}
+
+/**
+ * Options
+ */
+.c-select-search__options {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/**
+ * Option row
+ */
+.c-select-search__row:not(:first-child) {
+    border-top: 1px solid #eee;
+}
+
+/**
+ * Option
+ */
+.c-select-search__option,
+.c-select-search__not-found {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 8px 16px;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.c-select-search--multiple .c-select-search__option {
+    height: 48px;
+}
+
+.c-select-search__option.is-selected {
+    @apply bg-primary-200 text-white;
+}
+
+.c-select-search__option.is-highlighted,
+.c-select-search__option:not(.is-selected):hover {
+    background: rgba(0, 179, 199, 0.1);
+}
+
+.c-select-search__option.is-highlighted.is-selected,
+.c-select-search__option.is-selected:hover {
+    @apply bg-primary-200 text-white;
+}
+
+/**
+ * Group
+ */
+.c-select-search__group-header {
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eee;
+    padding: 8px 16px;
+}
+
+/**
+ * States
+ */
+.c-select-search.is-disabled {
+    opacity: 0.5;
+}
+
+.c-select-search.is-loading .c-select-search__value::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%232F2D37' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");
+    background-size: 11px;
+}
+
+.c-select-search:not(.is-disabled) .c-select-search__input {
+    cursor: pointer;
+}
+
+/**
+ * Modifiers
+ */
+.c-select-search--multiple {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.c-select-search:not(.is-loading):not(.c-select-search--multiple) .c-select-search__value::after {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNCAwSDBMNy4zMzMzMyA5TDE0IDBaIiBmaWxsPSIjQzREQUYyIiAvPgogICAgICAgIDwvc3ZnPg==");
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    width: 39px;
+    height: 60%;
+    @apply border-l border-gray-300;
+}
+
+.c-select-search--multiple .c-select-search__input {
+    cursor: initial;
+}
+
+.c-select-search--multiple .c-select-search__input {
+    border-radius: 3px 3px 0 0;
+}
+
+.c-select-search--multiple:not(.c-select-search--search) .c-select-search__input {
+    cursor: default;
+}
+
+.c-select-search:not(.c-select-search--multiple) .c-select-search__input:hover {
+    border-color: #2fcc8b;
+}
+
+.c-select-search:not(.c-select-search--multiple) .c-select-search__select {
+    position: absolute;
+    z-index: 2;
+    top: 44px;
+    right: 0;
+    left: 0;
+    border-radius: 3px;
+    overflow: auto;
+    max-height: 360px;
+}
+
+.c-select-search--multiple .c-select-search__select {
+    position: relative;
+    overflow: auto;
+    max-height: 260px;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 3px 3px;
+}
+
+.c-select-search__not-found {
+    height: auto;
+    padding: 16px;
+    text-align: center;
+    color: #888;
+}
+
+.tippy-box[data-theme~="light"] {
+    @apply text-gray-450 rounded-lg bg-white px-4 py-2 font-medium shadow-card;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+    border-bottom-color: white !important;
+}
+
+/* purgecss end ignore */

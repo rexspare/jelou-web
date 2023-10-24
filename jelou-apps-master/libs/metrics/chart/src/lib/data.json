@@ -1,0 +1,750 @@
+[
+    {
+        "id": "START",
+        "sourceId": "",
+        "total": 8852,
+        "percentage": "100.00",
+        "type": "start"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "91929"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": false,
+        "sourceId": "91929",
+        "total": 4,
+        "type": "visit",
+        "percentage": "400.00"
+    },
+    {
+        "_id": {
+            "id": "91950",
+            "sourceId": "91950"
+        },
+        "id": "91950",
+        "label": "No desea movimientos",
+        "isStart": false,
+        "sourceId": "91950",
+        "total": 1,
+        "type": "visit",
+        "percentage": "100.00"
+    },
+    {
+        "_id": {
+            "id": "91958",
+            "sourceId": "91956"
+        },
+        "id": "91958",
+        "label": "Generar estado de cuenta",
+        "isStart": false,
+        "sourceId": "91956",
+        "total": 4,
+        "type": "visit",
+        "percentage": "133.33"
+    },
+    {
+        "_id": {
+            "id": "91925",
+            "sourceId": "91951"
+        },
+        "id": "91925",
+        "label": "Términos y condiciones",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 143,
+        "type": "visit",
+        "percentage": "16.53"
+    },
+    {
+        "_id": {
+            "id": "91948",
+            "sourceId": "START"
+        },
+        "id": "91948",
+        "label": "Saldo",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 334,
+        "type": "visit",
+        "percentage": "3.77"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "91938"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": false,
+        "sourceId": "91938",
+        "total": 2,
+        "type": "visit",
+        "percentage": "0.12"
+    },
+    {
+        "_id": {
+            "id": "91945",
+            "sourceId": "START"
+        },
+        "id": "91945",
+        "label": "Codigo de seguridad",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 5,
+        "type": "visit",
+        "percentage": "0.06"
+    },
+    {
+        "_id": {
+            "id": "91955",
+            "sourceId": "START"
+        },
+        "id": "91955",
+        "label": "Estado de cuenta",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 6,
+        "type": "visit",
+        "percentage": "0.07"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "91948"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": false,
+        "sourceId": "91948",
+        "total": 2,
+        "type": "visit",
+        "percentage": "0.60"
+    },
+    {
+        "_id": {
+            "id": "91938",
+            "sourceId": "91933"
+        },
+        "id": "91938",
+        "label": "Medio de contacto",
+        "isStart": false,
+        "sourceId": "91933",
+        "total": 1739,
+        "type": "visit",
+        "percentage": "43475.00"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "91945"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": false,
+        "sourceId": "91945",
+        "total": 1,
+        "type": "visit",
+        "percentage": "20.00"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "START"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 1217,
+        "type": "visit",
+        "percentage": "13.75"
+    },
+    {
+        "_id": {
+            "id": "91955",
+            "sourceId": "91949"
+        },
+        "id": "91955",
+        "label": "Estado de cuenta",
+        "isStart": false,
+        "sourceId": "91949",
+        "total": 2,
+        "type": "visit",
+        "percentage": "50.00"
+    },
+    {
+        "_id": {
+            "id": "91937",
+            "sourceId": "91933"
+        },
+        "id": "91937",
+        "label": "Cliente no encontrado",
+        "isStart": false,
+        "sourceId": "91933",
+        "total": 17,
+        "type": "visit",
+        "percentage": "425.00"
+    },
+    {
+        "_id": {
+            "id": "91951",
+            "sourceId": "START"
+        },
+        "id": "91951",
+        "label": "Menú principal",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 865,
+        "type": "visit",
+        "percentage": "9.77"
+    },
+    {
+        "_id": {
+            "id": "91954",
+            "sourceId": "91952"
+        },
+        "id": "91954",
+        "label": "Generar certificado",
+        "isStart": false,
+        "sourceId": "91952",
+        "total": 14,
+        "type": "visit",
+        "percentage": "700.00"
+    },
+    {
+        "_id": {
+            "id": "91958",
+            "sourceId": "91959"
+        },
+        "id": "91958",
+        "label": "Generar estado de cuenta",
+        "isStart": false,
+        "sourceId": "91959",
+        "total": 3,
+        "type": "visit",
+        "percentage": "100.00"
+    },
+    {
+        "_id": {
+            "id": "91950",
+            "sourceId": "91945"
+        },
+        "id": "91950",
+        "label": "No desea movimientos",
+        "isStart": false,
+        "sourceId": "91945",
+        "total": 1,
+        "type": "visit",
+        "percentage": "20.00"
+    },
+    {
+        "_id": {
+            "id": "91955",
+            "sourceId": "91951"
+        },
+        "id": "91955",
+        "label": "Tipo de estado de cuenta",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 20,
+        "type": "visit",
+        "percentage": "2.31"
+    },
+    {
+        "_id": {
+            "id": "91955",
+            "sourceId": "91948"
+        },
+        "id": "91955",
+        "label": "Estado de cuenta",
+        "isStart": false,
+        "sourceId": "91948",
+        "total": 1,
+        "type": "visit",
+        "percentage": "0.30"
+    },
+    {
+        "_id": {
+            "id": "91953",
+            "sourceId": "START"
+        },
+        "id": "91953",
+        "label": "Nombre en certificado",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 5,
+        "type": "visit",
+        "percentage": "0.06"
+    },
+    {
+        "_id": {
+            "id": "91929",
+            "sourceId": "START"
+        },
+        "id": "91929",
+        "label": "Registro cancelado",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 1,
+        "type": "visit",
+        "percentage": "0.01"
+    },
+    {
+        "_id": {
+            "id": "91954",
+            "sourceId": "91954"
+        },
+        "id": "91954",
+        "label": "Generar certificado",
+        "isStart": false,
+        "sourceId": "91954",
+        "total": 1,
+        "type": "visit",
+        "percentage": "7.14"
+    },
+    {
+        "_id": {
+            "id": "91950",
+            "sourceId": "START"
+        },
+        "id": "91950",
+        "label": "No desea movimientos",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 6,
+        "type": "visit",
+        "percentage": "0.07"
+    },
+    {
+        "_id": {
+            "id": "91956",
+            "sourceId": "START"
+        },
+        "id": "91956",
+        "label": "Tarjeta de crédito",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 3,
+        "type": "visit",
+        "percentage": "0.03"
+    },
+    {
+        "_id": {
+            "id": "91956",
+            "sourceId": "91955"
+        },
+        "id": "91956",
+        "label": "Tarjeta de crédito",
+        "isStart": false,
+        "sourceId": "91955",
+        "total": 67,
+        "type": "visit",
+        "percentage": "1116.67"
+    },
+    {
+        "_id": {
+            "id": "91963",
+            "sourceId": "91966"
+        },
+        "id": "91963",
+        "label": "Código de seguridad",
+        "isStart": false,
+        "sourceId": "91966",
+        "total": 1,
+        "type": "visit",
+        "percentage": "100.00"
+    },
+    {
+        "_id": {
+            "id": "91949",
+            "sourceId": "91950"
+        },
+        "id": "91949",
+        "label": "Movimientos",
+        "isStart": false,
+        "sourceId": "91950",
+        "total": 4,
+        "type": "visit",
+        "percentage": "400.00"
+    },
+    {
+        "_id": {
+            "id": "91952",
+            "sourceId": "START"
+        },
+        "id": "91952",
+        "label": "Tipo de certificado",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 2,
+        "type": "visit",
+        "percentage": "0.02"
+    },
+    {
+        "_id": {
+            "id": "91929",
+            "sourceId": "91950"
+        },
+        "id": "91929",
+        "label": "Registro cancelado",
+        "isStart": false,
+        "sourceId": "91950",
+        "total": 1,
+        "type": "visit",
+        "percentage": "100.00"
+    },
+    {
+        "_id": {
+            "id": "91953",
+            "sourceId": "91945"
+        },
+        "id": "91953",
+        "label": "Nombre en certificado",
+        "isStart": false,
+        "sourceId": "91945",
+        "total": 15,
+        "type": "visit",
+        "percentage": "300.00"
+    },
+    {
+        "_id": {
+            "id": "91948",
+            "sourceId": "91945"
+        },
+        "id": "91948",
+        "label": "Saldo",
+        "isStart": false,
+        "sourceId": "91945",
+        "total": 1225,
+        "type": "visit",
+        "percentage": "24500.00"
+    },
+    {
+        "_id": {
+            "id": "91948",
+            "sourceId": "91948"
+        },
+        "id": "91948",
+        "label": "Saldo",
+        "isStart": false,
+        "sourceId": "91948",
+        "total": 6,
+        "type": "visit",
+        "percentage": "1.80"
+    },
+    {
+        "_id": {
+            "id": "91954",
+            "sourceId": "91951"
+        },
+        "id": "91954",
+        "label": "Generar certificado",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 1,
+        "type": "visit",
+        "percentage": "0.12"
+    },
+    {
+        "_id": {
+            "id": "91925",
+            "sourceId": "START"
+        },
+        "id": "91925",
+        "label": "Términos y condiciones",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 200,
+        "type": "visit",
+        "percentage": "2.26"
+    },
+    {
+        "_id": {
+            "id": "91959",
+            "sourceId": "91955"
+        },
+        "id": "91959",
+        "label": "Cuenta corriente",
+        "isStart": false,
+        "sourceId": "91955",
+        "total": 3,
+        "type": "visit",
+        "percentage": "50.00"
+    },
+    {
+        "_id": {
+            "id": "91952",
+            "sourceId": "91953"
+        },
+        "id": "91952",
+        "label": "Tipo de certificado",
+        "isStart": false,
+        "sourceId": "91953",
+        "total": 22,
+        "type": "visit",
+        "percentage": "440.00"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "91951"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 345,
+        "type": "visit",
+        "percentage": "39.88"
+    },
+    {
+        "_id": {
+            "id": "91925",
+            "sourceId": "91938"
+        },
+        "id": "91925",
+        "label": "Términos y condiciones",
+        "isStart": false,
+        "sourceId": "91938",
+        "total": 1,
+        "type": "visit",
+        "percentage": "0.06"
+    },
+    {
+        "_id": {
+            "id": "91925",
+            "sourceId": "91933"
+        },
+        "id": "91925",
+        "label": "Términos y condiciones",
+        "isStart": false,
+        "sourceId": "91933",
+        "total": 1,
+        "type": "visit",
+        "percentage": "25.00"
+    },
+    {
+        "_id": {
+            "id": "91948",
+            "sourceId": "91955"
+        },
+        "id": "91948",
+        "label": "Saldo",
+        "isStart": false,
+        "sourceId": "91955",
+        "total": 1,
+        "type": "visit",
+        "percentage": "16.67"
+    },
+    {
+        "_id": {
+            "id": "91953",
+            "sourceId": "91951"
+        },
+        "id": "91953",
+        "label": "Nombre en certificado",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 2,
+        "type": "visit",
+        "percentage": "0.23"
+    },
+    {
+        "_id": {
+            "id": "91955",
+            "sourceId": "91945"
+        },
+        "id": "91955",
+        "label": "Tipo de estado de cuenta",
+        "isStart": false,
+        "sourceId": "91945",
+        "total": 69,
+        "type": "visit",
+        "percentage": "1380.00"
+    },
+    {
+        "_id": {
+            "id": "91933",
+            "sourceId": "91925"
+        },
+        "id": "91933",
+        "label": "Registro",
+        "isStart": false,
+        "sourceId": "91925",
+        "total": 279,
+        "type": "visit",
+        "percentage": "195.10"
+    },
+    {
+        "_id": {
+            "id": "91949",
+            "sourceId": "91948"
+        },
+        "id": "91949",
+        "label": "Movimientos",
+        "isStart": false,
+        "sourceId": "91948",
+        "total": 336,
+        "type": "visit",
+        "percentage": "100.60"
+    },
+    {
+        "_id": {
+            "id": "91948",
+            "sourceId": "91949"
+        },
+        "id": "91948",
+        "label": "Saldo",
+        "isStart": false,
+        "sourceId": "91949",
+        "total": 1,
+        "type": "visit",
+        "percentage": "25.00"
+    },
+    {
+        "_id": {
+            "id": "91949",
+            "sourceId": "START"
+        },
+        "id": "91949",
+        "label": "Movimientos",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 4,
+        "type": "visit",
+        "percentage": "0.05"
+    },
+    {
+        "_id": {
+            "id": "91950",
+            "sourceId": "91951"
+        },
+        "id": "91950",
+        "label": "No desea movimientos",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 1,
+        "type": "visit",
+        "percentage": "0.12"
+    },
+    {
+        "_id": {
+            "id": "91925",
+            "sourceId": "91945"
+        },
+        "id": "91925",
+        "label": "Términos y condiciones",
+        "isStart": false,
+        "sourceId": "91945",
+        "total": 1,
+        "type": "visit",
+        "percentage": "20.00"
+    },
+    {
+        "_id": {
+            "id": "91929",
+            "sourceId": "91933"
+        },
+        "id": "91929",
+        "label": "Registro cancelado",
+        "isStart": false,
+        "sourceId": "91933",
+        "total": 1,
+        "type": "visit",
+        "percentage": "25.00"
+    },
+    {
+        "_id": {
+            "id": "91966",
+            "sourceId": "START"
+        },
+        "id": "91966",
+        "label": "Tarjeta de débito",
+        "isStart": true,
+        "sourceId": "START",
+        "total": 1,
+        "type": "visit",
+        "percentage": "0.01"
+    },
+    {
+        "_id": {
+            "id": "91929",
+            "sourceId": "91925"
+        },
+        "id": "91929",
+        "label": "Registro cancelado",
+        "isStart": false,
+        "sourceId": "91925",
+        "total": 20,
+        "type": "visit",
+        "percentage": "13.99"
+    },
+    {
+        "_id": {
+            "id": "91949",
+            "sourceId": "91949"
+        },
+        "id": "91949",
+        "label": "Movimientos",
+        "isStart": false,
+        "sourceId": "91949",
+        "total": 1,
+        "type": "visit",
+        "percentage": "25.00"
+    },
+    {
+        "_id": {
+            "id": "91945",
+            "sourceId": "91938"
+        },
+        "id": "91945",
+        "label": "Codigo de seguridad",
+        "isStart": false,
+        "sourceId": "91938",
+        "total": 1546,
+        "type": "visit",
+        "percentage": "88.90"
+    },
+    {
+        "_id": {
+            "id": "91950",
+            "sourceId": "91948"
+        },
+        "id": "91950",
+        "label": "No desea movimientos",
+        "isStart": false,
+        "sourceId": "91948",
+        "total": 246,
+        "type": "visit",
+        "percentage": "73.65"
+    },
+    {
+        "_id": {
+            "id": "91948",
+            "sourceId": "91951"
+        },
+        "id": "91948",
+        "label": "Saldo",
+        "isStart": false,
+        "sourceId": "91951",
+        "total": 50,
+        "type": "visit",
+        "percentage": "5.78"
+    },
+    {
+        "_id": {
+            "id": "91925",
+            "sourceId": "91925"
+        },
+        "id": "91925",
+        "label": "Términos y condiciones",
+        "isStart": false,
+        "sourceId": "91925",
+        "total": 3,
+        "type": "visit",
+        "percentage": "2.10"
+    }
+]

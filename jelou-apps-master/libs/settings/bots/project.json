@@ -1,0 +1,30 @@
+{
+  "name": "settings-bots",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/settings/bots/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/settings/bots/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/settings/bots"
+      ],
+      "options": {
+        "jestConfig": "libs/settings/bots/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

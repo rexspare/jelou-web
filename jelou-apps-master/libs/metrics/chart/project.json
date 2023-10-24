@@ -1,0 +1,30 @@
+{
+  "name": "metrics-chart",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/metrics/chart/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/metrics/chart/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/metrics/chart"
+      ],
+      "options": {
+        "jestConfig": "libs/metrics/chart/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

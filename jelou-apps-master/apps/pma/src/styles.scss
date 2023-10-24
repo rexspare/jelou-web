@@ -1,0 +1,922 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,400i,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import "~react-datepicker/dist/react-datepicker.css";
+@import "tailwindcss/screens";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants; // T
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    html {
+        font-size: 14px !important;
+    }
+}
+.preview_wave:first-child {
+    width: 100% !important;
+}
+/* You can add global styles to this file, and also import other style files */
+.bg-login {
+    background: linear-gradient(180deg, rgba(55, 59, 90, 0) 0%, #31355c 100%), url("https://i.imgur.com/tdPsT4g.jpg"), #c4c4c4;
+    background-size: auto 110%;
+    background-position: -19.375rem;
+}
+
+.login-button-gradient {
+    background: linear-gradient(270deg, #00a2cf -4.74%, #00b3c7 75.36%, #f4db96 135.07%);
+}
+
+.input-primary {
+    @apply appearance-none rounded-full border-default py-2 px-4 leading-tight;
+    border-color: #c4daf2;
+    &:focus {
+        @apply outline-none;
+    }
+}
+
+.input-primary:focus {
+    @apply border-[#93c5fd] shadow-outline-blue outline-none #{!important};
+}
+
+@screen sm {
+    .input-primary {
+        @apply appearance-none rounded-full border-default py-3 px-4 leading-tight;
+        border-color: #c4daf2;
+        &:focus {
+            @apply outline-none;
+        }
+    }
+}
+
+.input {
+    width: 100%;
+    background-color: #ffff;
+    border: 0.0938rem solid rgba(166, 180, 208, 0.5);
+    border-radius: 0.8125rem;
+    font-size: 0.875rem;
+    color: #727c94;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: 1rem;
+    padding: 0.313rem 0.75rem 0.313rem 2.5rem !important;
+}
+
+.input.short {
+    width: 8.75rem;
+    padding: 0.5rem 1.2rem;
+}
+
+.input:focus {
+    @apply border-blue-300 shadow-outline-blue outline-none ring-gray-55/25 #{!important};
+}
+
+.input-new-chat {
+    width: 100%;
+    border-width: 0.094rem;
+    border-style: solid;
+    background-color: white;
+    border-radius: 1.875rem;
+    border-color: #c4daf2;
+    padding: 0.313rem 0.75rem 0.313rem 2.5rem !important;
+    font-size: 0.775rem;
+    color: #727c94;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.input-tag {
+    padding: 0.375rem 0.75rem 0.375rem 2.5rem !important;
+    font-size: 0.813rem !important;
+}
+
+input.input-name {
+    font-size: 0.938rem;
+    border: solid;
+    border-width: 0rem 0rem 0.063rem 0rem;
+    border-color: rgba(196, 218, 242, 1);
+    padding: 0rem;
+    @apply ring-transparent;
+}
+
+input.input-name:focus {
+    outline: none;
+    border: solid;
+    border-width: 0rem 0rem 0.063rem 0rem;
+    border-color: #31355c;
+    padding: 0rem;
+    @apply ring-transparent;
+}
+
+.input-mobile {
+    width: 100%;
+    border-width: 0.063rem;
+    background-color: #ffff;
+    border-radius: 0.75rem;
+    border-color: #dde2ee;
+    padding: 0.563rem 0.5rem;
+    font-weight: 500;
+    font-size: 0.938rem;
+    color: #7e819f;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.input-mobile:focus {
+    @apply outline-none #{!important};
+}
+
+.border-buttons {
+    border-radius: 1.875rem;
+    box-shadow: 0rem 0.313rem 1.563rem rgba(42, 139, 242, 0.07), 0rem 0.438rem 1.563rem rgba(42, 139, 242, 0.03),
+        0rem 0.625rem 10.313rem rgba(0, 0, 0, 0.03);
+}
+
+.border-tp {
+    border-top-style: solid;
+    border-top: 0.0625rem solid rgba(166, 180, 208, 0.25);
+}
+
+.border-btm {
+    border-bottom-style: solid;
+    border-bottom: 0.0625rem solid rgba(166, 180, 208, 0.25);
+}
+
+.border-lft {
+    border-left-style: solid;
+    border-left: 0.0625rem solid rgba(166, 180, 208, 0.25);
+}
+
+.border-rght {
+    border-right-style: solid;
+    border-right: 0.0625rem solid rgba(166, 180, 208, 0.25);
+}
+
+.border-all {
+    border-style: solid;
+    border: 1px solid rgba(166, 180, 208, 0.25);
+}
+
+.PhoneInputInput {
+    background-color: #eaf4ff !important;
+    color: #7e819f !important;
+    padding-left: 0.5rem;
+    border-left: 0.063rem solid #c7e2ff;
+    height: 2.25rem;
+    font-size: 100%;
+    border-radius: 0;
+    border-color: transparent !important;
+    --tw-ring-color: transparent !important;
+    box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+}
+
+.PhoneInputInputsearch *::after,
+.PhoneInputInputsearch *::before {
+    --tw-ring-color: transparent !important;
+    box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+}
+
+.PhoneInputCountry {
+    margin-right: 0.5rem !important;
+}
+
+.PhoneInputInput:focus {
+    @apply outline-none;
+}
+
+::-webkit-scrollbar {
+    content: "";
+    width: 0.3rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cde1e7;
+    border-radius: 9999rem;
+    height: 1.25rem;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-inactive-outline {
+    display: flex;
+    justify-content: center;
+    border-radius: 1.875rem;
+    color: #727c94;
+    border: 0.063rem solid #f2f7fd;
+    padding: 0.75rem 2rem;
+    font-size: 0.813rem;
+    font-weight: 700;
+}
+
+.btn-primary {
+    @apply rounded-full border-transparent bg-primary-200 py-3 px-6 text-sm text-white outline-none;
+    &:disabled {
+        display: flex;
+        border: 0.063rem solid transparent;
+        justify-content: center;
+        border-radius: 1.875rem;
+        color: #a2b2d2;
+        background-color: #e4eaf7;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.813rem;
+        cursor: not-allowed;
+        font-weight: 700;
+    }
+}
+
+.btn-primary:hover {
+    background-color: #35d1e2;
+    &:disabled {
+        display: flex;
+        border: 0.063rem solid transparent;
+        justify-content: center;
+        border-radius: 1.875rem;
+        color: #a2b2d2;
+        background-color: #e4eaf7;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.813rem;
+        cursor: not-allowed;
+        font-weight: 700;
+    }
+}
+
+.btn-primary:focus {
+    outline: 0;
+}
+
+.btn-primary-inverted {
+    @apply rounded-full border-transparent bg-primary-100 py-3 px-6 text-sm text-primary-200 outline-none;
+    &:disabled {
+        display: flex;
+        border: 0.063rem solid transparent;
+        justify-content: center;
+        border-radius: 1.875rem;
+        color: #a2b2d2;
+        background-color: #e4eaf7;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.813rem;
+        cursor: not-allowed;
+        font-weight: 700;
+    }
+}
+
+.btn-primary-inverted:hover {
+    background-color: #00b3c7;
+    color: #fff;
+    &:disabled {
+        display: flex;
+        border: 0.063rem solid transparent;
+        justify-content: center;
+        border-radius: 1.875rem;
+        background-color: #e4eaf7;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.813rem;
+        cursor: not-allowed;
+        font-weight: 700;
+    }
+}
+
+.btn-primary-inverted:focus {
+    outline: 0;
+}
+
+.btn-primary-inverted {
+    @apply rounded-full border-transparent bg-primary-600 py-3 px-6 text-sm text-primary-200 outline-none;
+    &:disabled {
+        display: flex;
+        border: 0.063rem solid transparent;
+        justify-content: center;
+        border-radius: 1.875rem;
+        color: #a2b2d2;
+        background-color: #e4eaf7;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.813rem;
+        cursor: not-allowed;
+        font-weight: 700;
+    }
+}
+
+.btn-primary-inverted:hover {
+    background-color: #00b3c7;
+    color: #fff;
+    &:disabled {
+        display: flex;
+        border: 0.063rem solid transparent;
+        justify-content: center;
+        border-radius: 1.875rem;
+        background-color: #e4eaf7;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.813rem;
+        cursor: not-allowed;
+        font-weight: 700;
+    }
+}
+
+.btn-primary-inverted:focus {
+    outline: 0;
+}
+
+.img-whatsapp {
+    background-image: url("assets/Rectangle\ 51.png");
+}
+
+.conversationActive {
+    height: 7rem;
+    display: flex;
+    position: relative;
+    padding: 0.5rem 0.5rem 0.25rem 1rem;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background: #f2f8ff;
+    border-width: 0 0 0.063rem 0.25rem;
+    border-color: #e0e4ec #00b3c7;
+}
+
+.conversationActivePost {
+    height: 6.3rem;
+    display: flex;
+    position: relative;
+    padding: 0.7rem 0.5rem 0.7rem 1rem;
+    align-items: center;
+    width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    background: #f2f7fd;
+    border-width: 0px 0px 0px 0px;
+    border-color: transparent;
+    border-bottom: 1px solid #e0e4ec;
+}
+
+.divParent:hover * {
+    display: block;
+}
+
+.divParent:hover picture {
+    @apply blur-sm;
+}
+
+.react-datepicker {
+    @apply border-gray-10 #{!important};
+}
+
+.react-datepicker,
+.react-datepicker__month-container {
+    @apply w-full #{!important};
+}
+
+.react-datepicker__header {
+    @apply border-none bg-transparent #{!important};
+}
+
+.react-datepicker__day-names {
+    @apply uppercase #{!important};
+}
+
+.react-datepicker__day-name {
+    @apply font-semibold text-gray-400 #{!important};
+}
+
+.react-datepicker__month {
+    @apply mt-0 #{!important};
+}
+
+.react-datepicker__current-month {
+    @apply mb-1 font-semibold uppercase text-gray-400 #{!important};
+}
+
+.react-datepicker__day {
+    @apply text-gray-400 #{!important};
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+    @apply bg-primary-200 text-white #{!important};
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    @apply bg-primary-200 text-white #{!important};
+}
+.react-datepicker__day--today,
+.react-datepicker__day--range-end,
+.react-datepicker__day--in-selecting-range {
+    border-radius: 0.3rem !important;
+    @apply bg-primary-200 text-white #{!important};
+}
+
+.react-datepicker__day--today:after,
+.react-datepicker__day--range-end:after,
+.react-datepicker__day--in-selecting-range:after {
+    @apply hidden #{!important};
+}
+
+.select-dropdown {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 0.938rem;
+    background: #fff;
+    background-color: #ffff;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #00b3c7;
+}
+
+.select-dropdown__value {
+    position: relative;
+    line-height: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 0.625rem;
+    background: rgba(0, 179, 199, 0.65);
+}
+
+.select-dropdown__input {
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 0 0.6rem 0;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 0.9375rem;
+    text-align: left;
+    color: white;
+    font-weight: 400;
+    line-height: 1.25;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    cursor: pointer !important;
+}
+
+.select-dropdown__input[value] {
+    background: rgba(0, 179, 199, 0.65);
+    padding-left: 1rem;
+}
+
+.select-dropdown__input[value=""] {
+    background: white;
+}
+
+.select-dropdown__input::placeholder {
+    height: 2.5rem;
+    width: 100% !important;
+    color: #727c94 !important;
+    background: #fff !important;
+    // padding-left: 1rem;
+}
+
+.select-dropdown__select {
+    position: absolute;
+    top: 3.125rem;
+    right: 0;
+    left: 0;
+    width: 100%;
+    color: #727c94;
+    max-height: 12.563rem !important;
+    z-index: 55;
+    border-radius: 0.375rem;
+    background: #fff;
+    box-shadow: 0 0.625rem 0.938rem -0.188rem rgba(0, 0, 0, 0.1), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.05);
+    overflow: auto;
+}
+
+.select-dropdown__option {
+    padding: 0.5rem 0.75rem;
+    // border-radius: 0.375rem;
+    display: block;
+    // height: "flex-1";
+    width: 100%;
+    background: #fff;
+    color: #727c94;
+    outline: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+    height: 2.5rem;
+    z-index: 55;
+    text-align: center;
+    border-bottom: 0.031rem solid;
+    border-bottom-color: rgba(166, 180, 208, 0.25);
+}
+
+.select-dropdown__option:hover {
+    z-index: -1;
+    border-radius: 0;
+}
+
+.select-dropdown:not(.is-loading):not(.select-dropdown--multiple) .select-dropdown__value::after {
+    transform: rotate(45deg);
+    border-right: 0.188rem solid #00b3c7;
+    border-bottom: 0.188rem solid #00b3c7;
+    pointer-events: none;
+    padding: 0.188rem;
+}
+
+.select-dropdown__value::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0.75rem !important;
+    top: calc(50% - 0.375rem);
+    width: 0.438rems;
+    height: 0.438rems;
+}
+
+.select-dropdown__option.is-selected {
+    @apply rounded-none bg-primary-200 text-white;
+}
+
+.select-dropdown__option.is-highlighted,
+.select-dropdown__option:not(.is-selected):hover {
+    background: rgba(0, 179, 199, 0.65);
+    border-radius: 0;
+    color: white;
+}
+
+.select-dropdown__option.is-highlighted.is-selected,
+.select-dropdown__option.is-selected:hover {
+    background-color: #00b3c7;
+
+    border-radius: 0;
+}
+
+.select-dropdown:hover {
+    @apply font-semibold outline-none #{!important};
+}
+
+/**
+ * Main wrapper
+ */
+.ov-react-select {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ov-react-select *,
+.ov-react-select *::after,
+.ov-react-select *::before {
+    box-sizing: inherit;
+}
+
+/**
+ * Value wrapper
+ */
+.ov-react-select__value {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-items: center;
+    outline: none;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    box-shadow: 0rem 0rem 0rem 0rem transparent;
+    height: 100%;
+    padding-left: 1rem;
+    color: "#727C94";
+    background-color: white;
+    border: 0.063rem solid rgba(196, 218, 242, 1);
+}
+
+.ov-react-select__placeholder {
+    font-weight: 500 !important;
+    color: #a6b4d0 !important;
+}
+
+.ov-react-select__control {
+    background-color: #f2f7fd !important;
+    border: 0rem solid transparent !important;
+    border-radius: 0.625rem !important;
+    box-shadow: 0 0 0 0 transparent !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    height: 100% !important;
+    justify-items: center !important;
+    outline: none !important;
+    overflow: hidden !important;
+    padding-left: 0.2rem !important;
+    position: relative !important;
+    z-index: unset !important;
+    cursor: pointer !important;
+    font-size: 0.813rem;
+    min-height: 2.125rem !important;
+    color: #c4daf2;
+}
+
+.ov-react-select-Input {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.ov-react-select__indicator-separator {
+    background-color: transparent !important;
+}
+
+.ov-react-select__dropdown-indicator {
+    padding: 0.438rem 0.5rem !important;
+}
+
+.ov-react-select:focus {
+    border-color: rgba(0, 179, 199, 1) !important;
+}
+
+.ov-react-select__value::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 0.563rem);
+    right: 1.188rem;
+    width: 0.688rem;
+    height: 0.688rem;
+}
+
+.css-b8ldur-Input {
+    margin: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-top: 0rem !important;
+}
+
+.css-b8ldur-Input:focus {
+    margin: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-top: 0rem !important;
+    @apply border-transparent focus:border-transparent focus:ring-transparent;
+}
+
+/**
+ * Input
+ */
+
+.ov-react-select__input {
+    display: flex;
+    justify-items: center;
+    outline: none;
+    font-weight: 500;
+    color: #7e819f;
+    font-size: 0.813rem;
+    // padding: 0.5rem 0rem 0.5rem 0rem;
+    width: 100%;
+}
+
+.ov-react-select__input input:focus {
+    @apply border-transparent focus:border-transparent focus:ring-transparent;
+}
+
+.ov-react-select__input::-webkit-search-decoration,
+.ov-react-select__input::-webkit-search-cancel-button,
+.ov-react-select__input::-webkit-search-results-button,
+.ov-react-select__input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.ov-react-select__input:not([readonly]):focus {
+    cursor: initial;
+}
+
+/**
+ * Options wrapper
+ */
+.ov-react-select__select {
+    border-radius: 0.188rem;
+    left: 0;
+    max-height: 22.5rem;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 2.75rem;
+    z-index: 2;
+    background-color: white;
+    border-radius: 0.375rem;
+    z-index: 20;
+    box-shadow: 0rem 0rem 1.25rem #eaf0f7;
+}
+
+/**
+ * Options Menu List
+ */
+
+.ov-react-select__menu-list {
+    left: 0 !important;
+    max-height: 12.563rem !important;
+    overflow: auto !important;
+    position: absolute !important;
+    right: 0 !important;
+    background-color: white !important;
+    border-radius: 0.375rem !important;
+    z-index: 50 !important;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    box-shadow: 0rem 0rem 0.625rem rgba(127, 128, 156, 0.25) !important;
+    top: 1rem;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.css-yk16xz-control {
+    position: unset !important;
+}
+
+.css-26l3qy-menu {
+    top: 1.5625rem !important;
+    border-radius: 0.6875rem !important;
+    box-shadow: 0.063rem 0.063rem 0.625rem rgba(127, 128, 156, 0.25) !important;
+    position: unset;
+    margin-top: 0px !important;
+}
+
+/**
+ * Options
+ */
+.ov-react-select__options {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+/**
+ * Option row
+ */
+.ov-react-select__row:not(:first-child) {
+    border-top: 0.063rem solid #eee;
+}
+
+/**
+ * Option
+ */
+.ov-react-select__option,
+.ov-react-select__not-found {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border-bottom: 0.031rem solid rgba(166, 180, 208, 0.25) !important;
+    outline: none;
+    font-size: 0.875rem !important;
+    text-align: left;
+    cursor: pointer;
+    z-index: 100;
+    color: #727c94 !important;
+    font-size: 0.8125rem !important;
+}
+
+.ov-react-select--multiple .ov-react-select__option {
+    min-height: 3rem;
+}
+
+.ov-react-select__option.is-selected {
+    @apply bg-primary-200 text-white;
+}
+
+.ov-react-select__option.is-highlighted,
+.ov-react-select__option:not(.is-selected):hover,
+.ov-react-select__option--is-focused {
+    background: rgba(0, 179, 199, 0.1) !important;
+    color: #727c94 !important;
+    cursor: pointer !important;
+}
+
+.ov-react-select__option--is-selected {
+    @apply bg-primary-200 text-white #{!important};
+}
+
+.ov-react-select__option.is-highlighted.is-selected,
+.ov-react-select__option.is-selected:hover {
+    @apply bg-primary-200 text-white;
+}
+
+/**
+ * Group
+ */
+.ov-react-select__group-header {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    background: #eee;
+    padding: 0.5rem 1rem;
+}
+
+/**
+ * States
+ */
+.ov-react-select.is-disabled {
+    opacity: 0.5;
+}
+
+.ov-react-select.is-loading .ov-react-select__value::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%232F2D37' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");
+    background-size: 0.688rem;
+}
+
+.ov-react-select__indicator,
+.ov-react-select__dropdown-indicator:hover {
+    color: #727c94 !important;
+}
+
+.ov-react-select:not(.is-disabled) .ov-react-select__input {
+    cursor: pointer;
+}
+
+/**
+ * Modifiers
+ */
+.ov-react-select--multiple {
+    border-radius: 0.188rem;
+    overflow: hidden;
+}
+
+.ov-react-select:not(.is-loading):not(.ov-react-select--multiple) .ov-react-select__value::after {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNCAwSDBMNy4zMzMzMyA5TDE0IDBaIiBmaWxsPSIjQzREQUYyIiAvPgogICAgICAgIDwvc3ZnPg==");
+    display: flex;
+    position: absolute;
+    right: 0.625rem;
+    top: 20%;
+    justify-content: center;
+    align-items: center;
+    width: 2.438rem;
+    height: 60%;
+    pointer-events: none;
+    border-left: 0.063rem solid rgba(196, 218, 242, 1);
+}
+
+.ov-react-select--multiple .ov-react-select__input {
+    cursor: initial;
+}
+
+.ov-react-select--multiple .ov-react-select__input {
+    border-radius: 0.188rem 0.188rem 0 0;
+}
+
+.ov-react-select--multiple:not(.ov-react-select--search) .ov-react-select__input {
+    cursor: default;
+}
+
+.ov-react-select:not(.ov-react-select--multiple) .ov-react-select__input:hover {
+    border-color: #2fcc8b;
+}
+
+.ov-react-select__not-found {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    color: #727c94 !important;
+    font-size: 0.8125rem !important;
+}
+
+.ov-react-select__menu-notice--no-options {
+    color: #727c94 !important;
+    font-size: 0.8125rem !important;
+}
+
+.ov-react-select__input--no-shadow {
+    box-shadow: none !important;
+}
+
+.btn-inactive {
+    display: flex;
+    border: 0.063rem solid transparent;
+    justify-content: center;
+    border-radius: 1.875rem;
+    color: #727c94;
+    background-color: #f2f7fd;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.813rem;
+    cursor: not-allowed;
+    font-weight: 700;
+}
+
+.tippy-box[data-theme="badgeChat"] {
+    background-color: transparent !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0.625rem;
+}
+
+.tippy-box[data-theme="badgeChat"] .tippy-content {
+    background-color: transparent !important;
+    margin: 0;
+    padding: 0;
+}

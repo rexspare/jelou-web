@@ -1,0 +1,30 @@
+{
+  "name": "shared-bubble",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/bubble/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/bubble/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/shared/bubble"
+      ],
+      "options": {
+        "jestConfig": "libs/shared/bubble/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

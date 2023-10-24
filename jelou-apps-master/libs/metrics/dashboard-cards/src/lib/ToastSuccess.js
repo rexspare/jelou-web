@@ -1,0 +1,20 @@
+import React from "react";
+
+const ToastSuccess = ({ message }) => {
+    return (
+        <div className="relative flex items-center justify-between">
+            <div className="flex">
+                <div className="text-15">{message}</div>
+            </div>
+            <div className="flex pl-10">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </svg>
+            </div>
+        </div>
+    );
+};
+
+export default ToastSuccess;

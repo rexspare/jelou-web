@@ -1,0 +1,20 @@
+{
+  "name": "monitoring-live-chats",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/live/chats/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/live/chats/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

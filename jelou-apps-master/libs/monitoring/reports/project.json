@@ -1,0 +1,20 @@
+{
+  "name": "monitoring-reports",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/reports/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/reports/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

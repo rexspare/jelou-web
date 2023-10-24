@@ -1,0 +1,30 @@
+{
+  "name": "monitoring-live-tickets-components",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/live/tickets/components/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/live/tickets/components/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/monitoring/live/tickets/components"
+      ],
+      "options": {
+        "jestConfig": "libs/monitoring/live/tickets/components/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

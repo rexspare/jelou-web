@@ -1,0 +1,20 @@
+{
+  "name": "diffusion-create-template-hsm-2023",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/diffusion/create-template-hsm-2023/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/diffusion/create-template-hsm-2023/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

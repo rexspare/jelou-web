@@ -1,0 +1,30 @@
+{
+  "name": "metrics-dashboard-cards",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/metrics/dashboard-cards/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/metrics/dashboard-cards/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/metrics/dashboard-cards"
+      ],
+      "options": {
+        "jestConfig": "libs/metrics/dashboard-cards/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

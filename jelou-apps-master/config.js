@@ -1,0 +1,35 @@
+const IS_PRODUCTION = process.env.NX_NODE_ENV === "production";
+
+const DASHBOARD_SERVER = IS_PRODUCTION
+    ? process.env.NX_REACT_APP_DASHBOARD_SERVER_BASE_URL
+    : localStorage.getItem("NX_REACT_APP_DASHBOARD_SERVER_BASE_URL") || process.env.NX_REACT_APP_DASHBOARD_SERVER_BASE_URL;
+
+const JELOU_API_V1 = IS_PRODUCTION
+    ? process.env.NX_REACT_APP_JELOU_API
+    : localStorage.getItem("NX_REACT_APP_JELOU_API") || process.env.NX_REACT_APP_JELOU_API;
+
+const JELOU_API_V2 = IS_PRODUCTION
+    ? process.env.NX_REACT_APP_JELOU_API_V2
+    : localStorage.getItem("NX_REACT_APP_JELOU_API_V2") || process.env.NX_REACT_APP_JELOU_API_V2;
+
+const JELOU_SHOP_API = IS_PRODUCTION
+    ? process.env.NX_REACT_APP_JELOU_SHOP_API
+    : localStorage.getItem("NX_REACT_APP_JELOU_SHOP_API") || process.env.NX_REACT_APP_JELOU_SHOP_API;
+
+const JELOU_PAYMENTS_API = IS_PRODUCTION
+    ? process.env.NX_REACT_APP_JELOU_PAYMENTS
+    : localStorage.getItem("NX_REACT_APP_JELOU_PAYMENTS") || process.env.NX_REACT_APP_JELOU_PAYMENTS;
+
+const JELOU_METRICS_API = IS_PRODUCTION
+    ? process.env.NX_REACT_APP_METRICS_API
+    : localStorage.getItem("NX_REACT_APP_METRICS_API") || process.env.NX_REACT_APP_METRICS_API;
+
+module.exports = {
+    IS_PRODUCTION,
+    DASHBOARD_SERVER,
+    JELOU_API_V1,
+    JELOU_API_V2,
+    JELOU_SHOP_API,
+    JELOU_PAYMENTS_API,
+    JELOU_METRICS_API,
+};

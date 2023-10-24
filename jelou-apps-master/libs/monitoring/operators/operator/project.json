@@ -1,0 +1,20 @@
+{
+  "name": "monitoring-operators-operator",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/monitoring/operators/operator/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/monitoring/operators/operator/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

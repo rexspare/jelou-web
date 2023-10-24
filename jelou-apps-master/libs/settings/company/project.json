@@ -1,0 +1,20 @@
+{
+  "name": "settings-company",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/settings/company/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/settings/company/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

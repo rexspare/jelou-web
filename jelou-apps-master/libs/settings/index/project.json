@@ -1,0 +1,30 @@
+{
+  "name": "settings-index",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/settings/index/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/settings/index/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/settings/index"
+      ],
+      "options": {
+        "jestConfig": "libs/settings/index/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

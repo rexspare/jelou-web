@@ -1,0 +1,30 @@
+{
+  "name": "shared-img",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/img/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/img/**/*.{ts,tsx,js,jsx,svg}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/shared/img"
+      ],
+      "options": {
+        "jestConfig": "libs/shared/img/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

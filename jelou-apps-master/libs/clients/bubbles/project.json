@@ -1,0 +1,30 @@
+{
+  "name": "clients-bubbles",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/clients/bubbles/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/clients/bubbles/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/clients/bubbles"
+      ],
+      "options": {
+        "jestConfig": "libs/clients/bubbles/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

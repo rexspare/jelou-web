@@ -1,0 +1,116 @@
+{
+  "name": "apps",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/apps/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/apps",
+        "index": "apps/apps/src/index.html",
+        "baseHref": "/",
+        "main": "apps/apps/src/main.ts",
+        "polyfills": "apps/apps/src/polyfills.js",
+        "tsConfig": "apps/apps/tsconfig.app.json",
+        "assets": [
+          "apps/apps/src/favicon.ico",
+          "apps/apps/src/OneSignalSDKWorker.js",
+          "apps/apps/src/assets"
+        ],
+        "styles": [
+          "apps/apps/src/styles.scss"
+        ],
+        "scripts": [],
+        "webpackConfig": "apps/apps/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/apps/src/environments/environment.js",
+              "with": "apps/apps/src/environments/environment.prod.js"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/apps/webpack.config.prod.js"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "overlay": true,
+        "buildTarget": "apps:build",
+        "liveReload": true,
+        "hmr": false,
+        "port": 4200,
+        "ssl": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps:build:development"
+        },
+        "production": {
+          "buildTarget": "apps:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/apps/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/apps"
+      ],
+      "options": {
+        "jestConfig": "apps/apps/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps:build:development"
+        },
+        "production": {
+          "buildTarget": "apps:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
